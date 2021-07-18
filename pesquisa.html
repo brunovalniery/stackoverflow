@@ -1,0 +1,283 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Stack Overflow</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="" />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</head>
+<body style="background-color: #fff">
+    <header style="background-color: #c4c4c4" class="m-0 p-0"> 
+            
+
+            <nav class="navbar navbar-expand-sm" style="background-color: #cecece">
+            <!--Logo-->
+            <a href="" class="navbar-brand" style="width:180px"><img src="assets/stack.png" alt="Logo" style="width: 60%; height: 20%; margin-right:20px"></a>
+
+            <!--Menu Hamburger-->
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navegacao2">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <!--Navegação-->
+            <div class="collapse navbar-collapse" id="navegacao2">
+                
+                <form>
+                     <input type="text" class="form-control float-left" placeholder="pesquisar..." style="min-width: 800px" >
+                </form>
+
+                 <form>
+                    <button type="button" class="btn btn-primary ml-3"> <i class="fas fa-bars"></i> </button>
+                </form>
+
+                
+
+            </div>
+
+            
+
+             
+         </nav>
+
+
+                <div id="" class="tags p-2" style="background-color:#cecece">
+                    <a href="" target="_blank">javascript</a>
+                    <a href="" target="_blank">css</a>
+                    <a href="" target="_blank">c#</a>
+                    <a href="" target="_blank">html</a>
+                    <a href="" target="_blank">mysql</a>
+                    <a href="" target="_blank">python</a>
+                    <a href="" target="_blank" id="tag-mais">mais tags</a>
+                </div>
+
+
+    </header>
+
+<!--
+<div class="links">
+
+            <div id="wrapper" class="p-0 m-0">-->
+                <!--<img src="https://avatars.githubusercontent.com/u/8335305?s=460&u=203b39a74174bc1dbe279de61f5f9cb446447c2a&v=4" alt="Bruno Valniery">-->
+                
+                <!--
+                <form>
+                    <img src="assets/stack.png" alt="Logo" style="width: 10%; height: 30%; margin-right:20px">
+                    <input type="text" id="fname" name="fname" placeholder="Pesquisar...">
+
+
+                    <button type="button" class="btn btn-primary ml-3"> <i class="fas fa-bars"></i> </button>
+
+                </form>-->
+                <!--<label for="fname">First Name</label>   -->
+<!--
+                <div id="" class="tags">
+                    <a href="" target="_blank">javascript</a>
+                    <a href="" target="_blank">css</a>
+                    <a href="" target="_blank">c#</a>
+                    <a href="" target="_blank">html</a>
+                    <a href="" target="_blank">mysql</a>
+                    <a href="" target="_blank">python</a>
+                    <a href="" target="_blank" id="tag-mais">mais tags</a>
+                </div>
+            </div>
+
+        
+        </div>-->
+
+
+
+    <div class="row"> <!-- MENU LATERAL-->
+        <div class="col-2 " style="border: 1px solid #cecece; min-height:350px;">
+
+           <div class="text-center p-2" style="border-bottom: 1px solid #cecece"> <a href="#">Home</a> </div> 
+           <div class="text-center p-2" style="border-bottom: 1px solid #cecece"> <a href="#">Perguntas</a> </div> 
+           <div class="text-center p-2" style="border-bottom: 1px solid #cecece"> <a href="#">Tags</a> </div> 
+           <div class="text-center p-2" style="border-bottom: 1px solid #cecece"> <a href="#">Sem resposta</a> </div> 
+
+ 
+        </div> <!-- FIM MENU LATERAL -->
+
+
+
+        <div class="col-7 m-2"><!-- POSTAGEM DE PERGUNTAS -->
+
+           
+           <h4 class="p-4 d-inline ">Todas perguntas</h4> <button type="button" class="btn btn-primary float-right">Faça um pergunta</button>
+
+           <div class="clearfix"></div> <br>
+
+           <h6 class="p-4 d-inline">149.500 perguntas</h6>  
+
+            <div id="" class="tagspesquisa d-inline float-right">
+                <a href="" target="_blank">ativos</a>
+                <a href="" target="_blank">recentes</a>
+            </div>
+
+            <hr>
+
+
+            
+            <div class="row m-2 p-1 linha" >   <!-- LINHA DE PERGUNTA-->
+                <div class="col-1 text-center voto">
+                    1 votos
+                </div>
+                <div class="col-1 text-center respostas" style="border: 1px solid #52b788;">
+                    2 resp.
+                </div>
+                <div class="col-1 text-center voto">
+                    20 visitas
+                </div>
+
+                <div class="col-9">
+                    <a href="#"> Meu site é feito de imagens animadas com javascript. Como torna-lo responsivo?</a>
+                </div> 
+            </div>  <!-- FIM LINHA DE PERGUNTA-->
+
+
+             <div class="row m-2 p-1 linha" >   <!-- LINHA DE PERGUNTA-->
+                <div class="col-1 text-center voto">
+                    0 votos
+                </div>
+                <div class="col-1 text-center respostas" style="border: 1px solid #52b788;">
+                    1 resp.
+                </div>
+                <div class="col-1 text-center voto">
+                    5 visitas
+                </div>
+
+                <div class="col-9">
+                    <a href="#"> Adicionar função onclick em menu dinamico wp_nav_menu no Wordpress</a>
+                </div>
+            </div>  <!-- FIM LINHA DE PERGUNTA-->
+           
+           <div class="row m-2 p-1 linha" >   <!-- LINHA DE PERGUNTA-->
+                <div class="col-1 text-center voto">
+                    3 votos
+                </div>
+                <div class="col-1 text-center respostas" style="border: 1px solid #52b788;">
+                    4 resp.
+                </div>
+                <div class="col-1 text-center voto">
+                    28 visitas
+                </div>
+
+                <div class="col-9">
+                    <a href="#"> Erro ao instalar pacotes com npm Node.Js</a>
+                </div>
+            </div>  <!-- FIM LINHA DE PERGUNTA-->
+
+
+            <div class="row m-2 p-1 linha" >   <!-- LINHA DE PERGUNTA-->
+                <div class="col-1 text-center voto">
+                    0 votos
+                </div>
+                <div class="col-1 text-center respostas" style="border: 1px solid #52b788;">
+                    1 resp.
+                </div>
+                <div class="col-1 text-center voto">
+                    5 visitas
+                </div>
+
+                <div class="col-9">
+                    <a href="#"> Como tirar espaços em branco na lateral de div's</a>
+                </div>
+            </div>  <!-- FIM LINHA DE PERGUNTA-->
+
+            <div class="row m-2 p-1 linha" >   <!-- LINHA DE PERGUNTA-->
+                <div class="col-1 text-center voto">
+                    20 votos
+                </div>
+                <div class="col-1 text-center respostas" style="border: 1px solid #52b788;">
+                    10 resp.
+                </div>
+                <div class="col-1 text-center voto">
+                    35 visitas
+                </div>
+
+                <div class="col-9">
+                    <a href="#"> JS: armazenar valores sorteados em array</a>
+                </div>
+            </div>  <!-- FIM LINHA DE PERGUNTA-->
+
+            <div class="row m-2 p-1 linha" >   <!-- LINHA DE PERGUNTA-->
+                <div class="col-1 text-center voto">
+                    20 votos
+                </div>
+                <div class="col-1 text-center respostas" style="border: 1px solid #52b788;">
+                    10 resp.
+                </div>
+                <div class="col-1 text-center voto">
+                    35 visitas
+                </div>
+
+                <div class="col-9">
+                    <a href="#"> NameError (uninitialized constant SistUsuario::EmpresaSistUsuario):</a>
+                </div>
+            </div>  <!-- FIM LINHA DE PERGUNTA-->
+
+            <div class="row m-2 p-1 linha" >   <!-- LINHA DE PERGUNTA-->
+                <div class="col-1 text-center voto">
+                    100 votos
+                </div>
+                <div class="col-1 text-center respostas" style="border: 1px solid #52b788;">
+                    30 resp.
+                </div>
+                <div class="col-1 text-center voto">
+                    1000 visitas
+                </div>
+
+                <div class="col-9">
+                    <a href="#"> ERRO CONEXAO COM SQL SERVER - VIA AZURE DATA STUDIO</a>
+                </div>
+            </div>  <!-- FIM LINHA DE PERGUNTA-->
+
+        </div> <!-- FIM POSTAGEM DE PERGUNTAS -->
+
+
+
+
+
+
+        <div class="col-2 text-center p-2 m-2" style="border-left: 1px solid #cecece"> <!-- TAGS RECENTES -->
+            <h4 class="p-4 d-inline m-2">Tags recentes</h4>
+
+            <div class="clearfix"></div> <br> 
+
+            <div id="" class="tagspesquisa m-4">
+                <a href="" target="_blank">Javascript</a> x 200
+            </div>     
+                <div id="" class="tagspesquisa m-4">
+                <a href="" target="_blank">Java</a> x 180
+            </div> 
+            <div id="" class="tagspesquisa m-4">
+                <a href="" target="_blank">C++</a> x 1000
+            </div> 
+            <div id="" class="tagspesquisa m-4">
+                <a href="" target="_blank">Node.js</a> x 190
+            </div> 
+            <div id="" class="tagspesquisa m-4">
+                <a href="" target="_blank">R</a> x 350
+            </div> 
+            <div id="" class="tagspesquisa m-4">
+                <a href="" target="_blank">Python</a> x 800
+            </div> 
+
+
+            </div>
+            
+        </div> <!-- FIM TAGS RECENTES -->
+
+
+    </div>
+
+    <script href="script.js"></script>
+</body>
+</html>
