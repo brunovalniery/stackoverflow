@@ -56,15 +56,9 @@ public class Pergunta {
 	@JoinColumn(name="pergunta_id")
 	private List<Resposta> respostas;
 	
-	/*public List<Respostas> addResposta(Resposta resposta) {
-		respostas.add(resposta);
+	public List<Resposta> addResposta(Resposta resposta) {
+		if(resposta!=null)
+			respostas.add(resposta);
 		return respostas;
-	}*/
-	
-	/*public void rmvResposta(Resposta resposta) {
-		if(respostas.contains(resposta)) {
-			respostas.remove(resposta);
-		}
-	}*/
-
+	}
 }

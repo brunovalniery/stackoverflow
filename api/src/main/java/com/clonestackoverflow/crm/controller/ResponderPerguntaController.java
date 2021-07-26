@@ -30,9 +30,9 @@ public class ResponderPerguntaController {
 	private PerguntaRepositorio perguntaRep;
 
 	// add resposta a pergunta existente
-	@PostMapping(path = {"/add/{id}"})
-	public ResponseEntity<List<Resposta>> addResposta(@PathVariable Long id, @RequestBody Resposta resposta) {
-		Optional<Pergunta> pergunta = perguntaRep.findById(id);
+	@PostMapping(path = {"/add/{pergunta_id}"})
+	public ResponseEntity<List<Resposta>> addResposta(@PathVariable Long pergunta_id, @RequestBody Resposta resposta) {
+		Optional<Pergunta> pergunta = perguntaRep.findById(pergunta_id);
 		ResponseEntity<List<Resposta>> response;
 		if (pergunta.isPresent()) {
 			resposta.setPergunta(pergunta.get());

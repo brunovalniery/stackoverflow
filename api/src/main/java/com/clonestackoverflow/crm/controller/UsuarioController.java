@@ -45,27 +45,37 @@ public class UsuarioController {
 	public ResponseEntity<UsuarioEstudante> addUser(@RequestBody UsuarioEstudante user) {
 		ResponseEntity<UsuarioEstudante> response;
 		try {
+			user.setRank(RankUsuario.BAIXO);
 			response = new ResponseEntity<UsuarioEstudante>(userEstRep.save(user)
 					,HttpStatus.CREATED);
-			user.setRank(RankUsuario.BAIXO);
 		}catch(IllegalArgumentException e) {
 			response = new ResponseEntity<UsuarioEstudante>(HttpStatus.BAD_REQUEST);
 		}
 		return response;
 	}
 	
-	@PutMapping(path = {"/{id}"})
+	/*@PutMapping(path = {"/{id}"})
 	public ResponseEntity<UsuarioEstudante> attUser(@PathVariable(value = "id") Long id,@RequestBody UsuarioEstudante newUser) {
 		Optional<UsuarioEstudante> user = userEstRep.findById(id);
 		if(user.isPresent()) {
-			UsuarioEstudante oldUser = user.get();
-			oldUser.setEmail(newUser.getEmail());
-			oldUser.setNome(newUser.getNome());
-			oldUser.setRank(newUser.getRank());
-			return new ResponseEntity<UsuarioEstudante>(oldUser,HttpStatus.OK);
+			user.get().setEmail(newUser.getEmail());
+			user.get().setNome(newUser.getNome());
+			return new ResponseEntity<UsuarioEstudante>(user.get(),HttpStatus.OK);
 		}else {
 			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
 		}
+	}*/
+	@PutMapping(path = {"/{id}"})
+	public ResponseEntity<UsuarioEstudante> attUser(@PathVariable(value = "id") Long id,@RequestBody UsuarioEstudante newUser) {
+		Optional<UsuarioEstudante> oldUser = userEstRep.findById(id);
+        if(oldUser.isPresent()){
+        	UsuarioEstudante usuario = oldUser.get();
+        	usuario.setNome(newUser.getNome());
+            userEstRep.save(usuario);
+            return new ResponseEntity<UsuarioEstudante>(usuario, HttpStatus.OK);
+        }
+        else
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
 	}
 	
 	@DeleteMapping(path = {"/{id}"})

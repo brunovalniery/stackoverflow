@@ -38,29 +38,22 @@ public class Resposta {
 	@Column(nullable = false)
 	private String texto;
 	
-	
 	@Getter 
 	@Setter
 	@Enumerated(EnumType.STRING)
 	private RankResposta rank;
-	
 	 
+	
 	@Column(nullable = false)
 	@Temporal(TemporalType.TIMESTAMP)
-	private Date dataPub;
-	
+	private Date dataPub;	
 	public String getDataPub() {
 		return sdf.format(dataPub);
 	}
 	
+
 	@Getter 
 	@Setter
 	@ManyToOne
 	private Pergunta pergunta;
-	
-	
-	/*public void avaliarResposta(RankResposta rank) {
-		this.rank = rank;
-	}*/
-	
 }
